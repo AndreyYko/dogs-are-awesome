@@ -16,12 +16,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .top-image-section {
   width: 100%;
-  height: 400px;
+  height: 70vh;
   background-image: url("images/dog-main-2.jpg");
   background-size: cover;
-  background-position: center 0;
   background-repeat: no-repeat;
   color: #fff;
 }
@@ -30,18 +35,18 @@
   font-size: 50px;
 }
 
-.bold {
+.top-image-section .bold {
   font-weight: 500;
 }
 
-.big {
+.top-image-section .big {
   font-size: 70px;
 }
 
 .top-image-section .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(212, 66, 244, 0.5);
+  background-color: rgba(206, 234, 185, 0.20);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,9 +57,123 @@
   padding: 15px 40px;
   font-size: 25px;
   color: #fff;
-  background-color: #42f47d;
+  background-color: #629C47;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 40px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.heading {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.heading h1 {
+  text-transform: uppercase;
+  color: #629C47;
+}
+
+.heading p {
+  color: #A6A7A6;
+  font-size: 20px;
+}
+
+.benefits {
+  width: 100%;
+  height: 220px;
+  display: flex;
+}
+
+.benefits .benefit {
+  width: calc(1000px / 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 250ms;
+}
+
+.benefit.dark {
+  background-color: #BBDFA2;
+}
+
+.benefit.lite {
+  background-color: #ceeab9;
+}
+
+.benefit img {
+  width: 60px;
+  margin-bottom: 20px;
+  transition: 250ms;
+}
+
+.benefit p {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.benefit .big {
+  font-size: 30px;
+}
+
+.benefit:hover {
+  background-color: #629C47;
+  width: 300px;
+}
+
+.benefit:hover img {
+  display: none;
+}
+
+.benefit:hover p {
+  text-align: center;
+}
+
+.photos {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.photos .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photos .row:first-child {
+  margin-bottom: 40px;
+}
+
+.photos .row .photo {
+  width: 220px;
+  height: 390px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo img {
+  height: 100%;
+}
+
+.photo .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(206, 234, 185, 0.35);
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+}
+
+.photo .overlay .name {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(98, 156, 71, 0.75);
 }
